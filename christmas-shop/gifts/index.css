@@ -1,0 +1,13 @@
+.logoLink {
+    text-transform: uppercase;
+    color: rgba(24, 28, 41, 1);
+}
+
+.nav-item {
+    text-transform: uppercase;
+    color: rgba(24, 28, 41, 1);
+}
+
+.nav-item .active {
+    color: rgba(255, 70, 70, 1);
+}
