@@ -3,6 +3,16 @@ body {
     padding: 0;
 }
 
+/* Header */
+
+.header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 83px;
+    justify-content: space-between;
+}
+
 .logoLink {
     text-transform: uppercase;
     color: rgba(24, 28, 41, 1);
@@ -19,6 +29,7 @@ body {
 }
 
 .nav-item {
+    width: 56px;
     text-transform: uppercase;
     color: rgba(24, 28, 41, 1);
     cursor: pointer;
@@ -37,6 +48,7 @@ body {
 
 .header-home {
     width: 1440px;
+    height: 63px;
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -46,24 +58,28 @@ body {
 .nav-ul {
     display: flex;
     list-style: none;
+    padding: 0;
 }
+
+/* Hero */
 
 .main-home {
     width: 1440px;
-    height: 524px;
+    height: 584px;
     margin: 0 auto;
     border-radius: 20px 20px 0px 0px;
     background-color: #FF4646;
     background-image: url('./asserts/bg-ball.png'), url('./asserts/bg-snow.png');
-    background-size: 1420px 535px;
+    background-size: cover;
+    background-position-y: -40px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    background-repeat: no-repeat;
 }
 
 .main-text-container {
-    width: 426px;
-    height: 404px;
-    /* border: 1px solid; */
+    width: 433px;
+    height: 345px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -78,7 +94,8 @@ body {
     color: #FFFFFF;
     cursor: pointer;
     border: none;
-    transition: all .5s
+    transition: all .5s;
+    margin-bottom: 11px;
 }
 
 .main-button:hover {
@@ -88,6 +105,8 @@ body {
 
 .main-tittle {
     text-align: center;
+
+
 }
 
 .about-home {
@@ -116,11 +135,10 @@ body {
 
 .about-text {
     max-width: 426px;
-    min-height: 328px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    padding-left: 60px;
 }
 
 /* Slider */
@@ -135,11 +153,12 @@ body {
     display: flex;
     align-items: center;
     overflow: hidden;
+    flex-direction: column;
 }
 
 .slider-content {
     width: 1276px;
-    height: 368px;
+    height: 275px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -153,6 +172,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 21px;
 }
 
 .slider-row {
@@ -239,8 +260,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
     margin-bottom: 20px;
+    justify-content: space-between;
 }
 
 .home-gifts-cards-container {
@@ -264,23 +285,25 @@ body {
 
 .description-gift {
     max-width: 310px;
-    height: 68px;
+    height: 75px;
     border-radius: 20px;
     background-color: #FFFFFF;
-    padding: 20px;
+    padding: 16px 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 9px;
 }
 
 /* CTA */
 
 .cta-home {
     width: 1440px;
-    height: 668px;
+    height: 608px;
     margin: 0 auto;
     background-image: url('./asserts/bg-forest.png'), url('./asserts/bg-snow.png');
     background-size: 1440px 668px;
+    background-size: cover;
+    background-position-y: -60px;
     background-repeat: no-repeat;
     background-color: #FF4646;
     display: flex;
@@ -294,7 +317,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 100px;
 }
 
 .timer-container {
@@ -307,12 +330,25 @@ body {
     justify-content: space-between; 
     color: #FFFFFF;
     align-items: center;
-    padding: 12px;
+    margin-top: 6px;
 }
+
+.timer-container > div:nth-child(1) {
+    padding-left: 13px;
+}
+.timer-container > div:nth-child(4) {
+    padding-right: 10px;
+}
+
 
 .timer-cell {
     width: 80px;
     height: 52px;
+    text-align: center;
+}
+
+.cta-title {
+    color: #FFFFFF;
     text-align: center;
 }
 
@@ -328,7 +364,7 @@ body {
     width: 1276px;
     height: 376px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .footer-cards-contaner {
@@ -357,13 +393,22 @@ body {
 .footer-links {
     width: 301px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 67px;
+    
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 20px;
 }
 
 .school {
     cursor: pointer;
     color: #181C29;
     transition: all .3s;
+    padding-left: 5px;
 
     &:hover {
         color: #FF4646;
@@ -387,9 +432,11 @@ body {
     font-size: 32px;
     font-weight: 600;
     line-height:  150%;
-    letter-spacing:  18%;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-top: 13px;
+    margin-bottom: 12px;
 }
 
 .h2 {
@@ -397,7 +444,7 @@ body {
     font-size: 24px;
     font-weight: 600;
     line-height:  152%;
-    letter-spacing:  16%;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
 }
 
@@ -407,7 +454,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     line-height:  152%;
-    letter-spacing:  8%;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
@@ -417,7 +464,7 @@ body {
     font-size: 12px;
     font-weight: 600;
     line-height:  130%;
-    letter-spacing:  5%;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
@@ -433,8 +480,7 @@ body {
     font-size: 24px;
     font-weight: 400;
     line-height:  100%;
-    letter-spacing:  5%;
-    /* color: #FFFFFF; */
+    letter-spacing: 0.05em;
 }
 
 .action-small {
@@ -442,7 +488,7 @@ body {
     font-size: 12px;
     font-weight: 600;
     line-height:  130%;
-    letter-spacing:  5%;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
@@ -451,7 +497,7 @@ body {
     font-size: 24px;
     font-weight: 600;
     line-height:  152%;
-    letter-spacing:  16%;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
 }
 
