@@ -1,10 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
 a {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 /* Header */
@@ -280,6 +284,12 @@ a {
     height: 342px;
     background-color: #ECF3F8;
     border-radius: 20px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.gift-card:hover .description-gift .h3 {
+    color: #FF4646;
 }
 
 .img-card {
@@ -387,6 +397,7 @@ a {
     justify-content: space-evenly;
     cursor: pointer;
     transition: all .3s;
+    color: #181C29;
 }
 
 .footer-card:hover {

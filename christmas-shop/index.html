@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/x-icon" href="/christmas-shop/asserts/snowflake.svg">
+    <link rel="icon" type="image/x-icon" href="../christmas-shop/asserts/christmas-tree.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -19,9 +19,9 @@
             </a>
             <nav class="nav-ul action-small">
                     <a class="nav-item" href="./gifts/">gifts</a>
-                    <a class="nav-item">about</a>
-                    <a class="nav-item">best</a>
-                    <a class="nav-item">contacts</a>
+                    <a class="nav-item" href="#about">about</a>
+                    <a class="nav-item" href="#best">best</a>
+                    <a class="nav-item" href="#contacts">contacts</a>
             </nav>
         </div>
     </header>
@@ -29,11 +29,13 @@
         <div class="main-text-container">
             <div class="caption" style="color: #FFFFFF;">Merry Christmas</div>
             <h1 class="main-tittle h1">Gift yourself the magic of new possibilities</h1>
-            <button class="main-button action-small">Explore Magical Gifts</button>
+            <form action="./gifts/">
+                <button class="main-button action-small">Explore Magical Gifts</button>
+            </form>
             <div style="color: #FFFFFF;" class="caption">and Happy New Year</div>
         </div>
     </main>
-    <section class="about-home">
+    <section id="about" class="about-home">
         <div class="about-content">
             <div class="about-text">
                 <div class="caption" style="color: #FF4646;" >About</div>
@@ -64,7 +66,7 @@
         </div>
     </div>
 
-    <section class="gifts-home">
+    <section id="best" class="gifts-home">
         <div class="gifts-title">
             <div class="caption" style="color: #FFFFFF;">Best Gifts</div>
             <div class="h2" style="color: #FFFFFF;">especially for you</div>
@@ -103,7 +105,9 @@
     <section class="cta-home">
         <div class="cta-container">
             <h2 class="h2 cta-title">Ready to start your<br> journey to a better<br> version of yourself?</h2>
-            <button class="main-button action-small" style="margin: -2px 0px 20px 0px;">Explore Magical Gifts</button>
+            <form action="./gifts/">
+                <button class="main-button action-small" style="margin: -2px 0px 20px 0px;">Explore Magical Gifts</button>
+            </form>
             <div class="caption" style="color: #FFFFFF;">The New Year is Coming Soon...</div>
             <div class="timer-container">
                 <div class="timer-cell">
@@ -124,24 +128,26 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer id="contacts" class="footer">
         <div class="footer-container">
             <div class="footer-cards-contaner">
-                <div class="footer-card">
+                <a class="footer-card" href="tel:+375291112233">
                     <img src="./asserts/santa-claus.svg" alt="claus">
                     <div class="footer-card-title action-large">+375 (29) 111-22-33</div>
                     <div class="footer-card-link h3">Call Us</div>
-                </div>
-                <div class="footer-card">
+                </a>
+                <a class="footer-card"                 
+                    href="https://maps.app.goo.gl/RzX8M5g2LShiAbmM9"
+                    target="_blank">
                     <img src="./asserts/christmas-tree.svg" alt="claus">
                     <div class="footer-card-title action-large">Magic forest</div>
                     <div class="footer-card-link h3">meet us</div>
-                </div>
-                <div class="footer-card">
+                </a>
+                <a class="footer-card" href="mailto:gifts@magic.com">
                     <img src="./asserts/snake.svg" alt="claus">
                     <div class="footer-card-title action-large">gifts@magic.com</div>
                     <div class="footer-card-link h3">write us</div>
-                </div>
+                </a>
             </div>
 
             <div class="footer-links">
@@ -163,7 +169,7 @@
                             </svg>
                 </div>
                 <p class="p" style="color: #181C29; margin-bottom: 13px;">© Copyright 2025, All Rights Reserved</p>
-                <a href="http://https://rs.school/" target="_blank" rel="noopener noreferrer">
+                <a href="https://rs.school/" target="_blank" rel="noopener noreferrer">
                     <div class="caption school">Made in Rolling Scopes School</div>
                 </a> 
             </div>
