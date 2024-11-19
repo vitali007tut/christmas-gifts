@@ -16,9 +16,8 @@ li {
 .header-container {
     width: 100%;
     display: flex;
-    align-items: center;
-    padding: 0px 83px;
     justify-content: space-between;
+    padding: 12px 97px 0px 83px;
 }
 
 .logoLink {
@@ -37,8 +36,8 @@ li {
 }
 
 .nav-item {
-    width: 56px;
-    border-radius: 20px;
+    width: 40px;
+    border-radius: 10px;
     text-transform: uppercase;
     color: rgba(24, 28, 41, 1);
     cursor: pointer;
@@ -61,7 +60,7 @@ li {
 
 .header-home {
     width: 1440px;
-    height: 63px;
+    height: 51px;
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -70,8 +69,8 @@ li {
 
 .nav-ul {
     display: flex;
-    list-style: none;
-    padding: 0;
+    width: 363px;
+    justify-content: space-between;
 }
 
 /* Gifts */
@@ -84,19 +83,48 @@ li {
     background-color: #FF4646;
     background-image: url('../asserts/bg-garland.png');
     background-size: contain;
-    /* display: flex;
-    align-items: center; */
     background-repeat: no-repeat;
 }
 
 .gifts-title {
-
+    width: 426px;
+    height: 144px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-left: 4px;
+    text-align: center;
 }
 
 .gift-items-block {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding-left: 82px;
+    padding-right: 70px;
+    grid-row-gap: 12px;
 }
+
+.filter-gift-cards {
+    display: flex;
+    justify-content: space-between;
+    width: 474px;
+    margin: 20px auto;
+    padding-left: 0;
+}
+
+.filter-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-item:hover {
+    background-color: #FFFFFF40;
+}
+
+.filter-item.active {
+    background: #FFFFFF40;
+    cursor: auto;
+    }
 
 .gift-card {
     width: 310px;
