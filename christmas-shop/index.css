@@ -145,20 +145,13 @@ a {
 }
 
 .header-home {
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     height: 64px;
     display: flex;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-
-    @media (max-width: 768px) {
-        width: 768px;
-    }
-
-    @media (max-width: 380px) {
-        width: 380px;
-    }
 }
 
 .nav-ul {
@@ -187,7 +180,7 @@ a {
     }
 }
 
-@media screen and (max-width: 768px){
+@media (max-width: 768px){
     .icon-burger {
         display: block;
     }
@@ -196,7 +189,8 @@ a {
 /* Hero */
 
 .main-home {
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     height: 584px;
     margin: 0 auto;
     border-radius: 20px 20px 0px 0px;
@@ -210,13 +204,11 @@ a {
     background-position-x: center;
 
     @media (max-width: 768px) {
-        width: 768px;
         background-size: 1251px 524px;
         background-position-y: 0;
     }
 
     @media (max-width: 380px) {
-        width: 380px;
         background-size: 1362px 572px;
     }
 }
@@ -257,7 +249,8 @@ a {
 }
 
 .about-home {
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     height: 648px;
     margin: 0 auto;
     background-image: url('./asserts/bg-snow.png');
@@ -265,21 +258,18 @@ a {
     background-color: #FF4646;
 
     @media (max-width: 768px) {
-        width: 768px;
         height: 648px;
     }
 
     @media (max-width: 380px) {
-        width: 380px;
         height: 1000px;
         padding-top: 48px;
     }
 }
 
 .about-content {
-    width: 1276px;
     height: 528px;
-    margin: 0 auto;
+    margin: 0 82px;
     background-color:#FFFFFF;
     border-radius: 20px;
     display: flex;
@@ -287,34 +277,41 @@ a {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     @media (max-width: 768px) {
-        width: 752px;
         height: 528px;
+        margin: 0 auto;
+        width: 98%;
     }
 
     @media (max-width: 380px) {
-        width: 364px;
+        margin: 0 8px;
         height: 880px;
         flex-direction: column;
+        width: 95.5%;
     }
 }
 
 .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    border-radius: 20px;
     
     @media (max-width: 768px) {
         border-radius: 20px;
         width: 376px;
-        height: 528px;
-        overflow: hidden;
+        height: 530px;
         position: relative;
     }
 
     @media (max-width: 380px) {
-        width: 364px;
+        width: 100%;
     }
 }
 
 .about-img {
     border-radius: 20px;
+    object-fit: cover;
 
     @media (max-width: 768px) {
         position: absolute;
@@ -323,16 +320,21 @@ a {
         transform: translate(-50%, -50%);
         width: auto;
         height: 100%;
-        object-fit: cover;
+    }
+
+    @media (max-width: 380px) {
+
     }
 }
 
 .about-text {
     max-width: 426px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 60px;
+    padding-right: 30px;
 
     @media (max-width: 768px) {
         max-width: 256px;
@@ -342,13 +344,15 @@ a {
         max-width: 325px;
         padding-left: 20px;
         padding-top: 60px;
+        padding-bottom: 61px;
     }
 }
 
 /* Slider */
 
 .slider-home {
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     height: 488px;
     margin: 0 auto;
     background-image: url('./asserts/bg-snow.png');
@@ -360,17 +364,15 @@ a {
     flex-direction: column;
 
     @media (max-width: 768px) {
-        width: 768px;
         height: 488px;
     }
     @media (max-width: 380px) {
-        width: 380px;
         height: 488px;
     }
 }
 
 .slider-content {
-    width: 1276px;
+    width: 88.5%;
     height: 275px;
     margin: 0 auto;
     display: flex;
@@ -378,12 +380,12 @@ a {
     justify-content: space-between;
 
     @media (max-width: 768px) {
-        width: 752px;
+        width: 98%;
         height: 275px;
     }
 
     @media (max-width: 380px) {
-        width: 364px;
+        width: 96%;
     }
 }
 
@@ -470,27 +472,24 @@ a {
 /* Gifts */
 
 .gifts-home {
-    width: 1440px;
-    height: 554px;
+    max-width: 1440px;
+    width: 100%;
+    height: fit-content;;
     margin: 0 auto;
     background-image: url('./asserts/bg-snow.png');
     background-size: cover;
     background-color: #FF4646;
 
     @media (max-width: 768px) {
-        width: 768px;
-        height: 908px;
     }
 
     @media (max-width: 380px) {
-        width: 380px;
         height: 1500px;
     }
 }
 
 .gifts-conteiner {
     width: 1276px;
-    height: 434px;
     margin: 0 auto;
     border: 1px solid;
 }
@@ -511,19 +510,24 @@ a {
 }
 
 .home-gifts-cards-container {
-    width: 1276px;
-    height: 342px;
+    width: 88.5%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    row-gap: 10px;
+    flex-wrap: wrap;
 
     @media (max-width: 768px) {
-        width: 639px;
-        height: 695px;
+        width: 84%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         justify-items: center;
-        grid-row-gap: 10px;
+        grid-row-gap: 12px;
+    }
+
+    @media (max-width: 767px) {
+        grid-auto-columns: 1fr 1fr;
+        grid-template-columns: auto;
     }
 
     @media (max-width: 380px) {
@@ -573,44 +577,48 @@ a {
 /* CTA */
 
 .cta-home {
-    width: 1440px;
-    height: 608px;
+    max-width: 1440px;
+    width: 100%;
+    height: 728px;
     margin: 0 auto;
     background-image: url('./asserts/bg-forest.png'), url('./asserts/bg-snow.png');
-    
-    background-size: cover;
-    background-position-y: -60px;
+    background-size: 1440px 670px;
+    background-position-y: 59px;
     background-repeat: no-repeat;
     background-color: #FF4646;
     display: flex;
     border-radius: 0px 0px 20px 20px;
 
     @media (max-width: 768px) {
-        width: 768px;
-        height: 608px;
+        height: 728px;
         background-position-x: center;
         background-size: 1440px 668px;
+        background-position-y: 60px;
     }
 
     @media (max-width: 380px) {
-        width: 380px;
         height: 756px;
-        background-position-y: 88px;
-        background-size: 1514px 668px;
+        background-position-y: 72px;
+        background-size: 1514px 685px;
     }
 }
 
 .cta-container {
     width: 426px;
-    height: 428px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 40px;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
 
     @media (max-width: 380px) {
         padding-top: 216px;
+        justify-content: flex-start;
     }
 }
 
@@ -649,33 +657,32 @@ a {
 /* Footer */
 
 .footer {
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     height: 496px;
     margin: 0 auto;
 
     @media (max-width: 768px) {
-        width: 768px;
         height: 928px;
     }
 
     @media (max-width: 380px) {
-        width: 380px;
     }
 }
 
 .footer-container {
-    width: 1276px;
+    width: 88.5%;
     height: 376px;
     margin: 0 auto;
     padding-top: 60px;
 
     @media (max-width: 768px) {
-        width: 752px;
+        width: 98%;
         height: 808px;
     }
 
     @media (max-width: 380px) {
-        width: 364px;
+        width: 96%;
         padding-top: 63px;
     }
 }
@@ -691,12 +698,14 @@ a {
         grid-gap: 12px;
         height: auto;
     }
+
+    @media (max-width: 380px) {
+    }
 }
 
 .footer-card {
     border-radius: 20px;
     background-color: #ECF3F8;
-    height: 184px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -704,6 +713,10 @@ a {
     transition: all .3s;
     color: #181C29;
     padding-top: 20px;
+
+    @media (max-width: 768px) {
+        padding-bottom: 18px;
+    }
 }
 
 .footer-card-title {

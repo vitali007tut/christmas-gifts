@@ -149,20 +149,13 @@ li {
 }
 
 .header-home {
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     height: 64px;
     display: flex;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-
-    @media (max-width: 768px) {
-        width: 768px;
-    }
-
-    @media (max-width: 380px) {
-        width: 380px;
-    }
 }
 
 .nav-ul {
@@ -191,7 +184,7 @@ li {
     }
 }
 
-@media screen and (max-width: 768px){
+@media (max-width: 768px){
     .icon-burger {
         display: block;
     }
@@ -200,29 +193,19 @@ li {
 /* Gifts */
 
 .gifts-main {
-    width: 1440px;
-    height: 1394px;
+    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
     border-radius: 20px;
     background-color: #FF4646;
     background-image: url('../asserts/bg-garland.png');
     background-size: contain;
     background-repeat: no-repeat;
-
-    @media (max-width: 768px) {
-        width: 768px;
-        height: 2456px;
-    }
-
-    @media (max-width: 380px) {
-        width: 380px;
-        height: 4676px;
-    }
+    padding-bottom: 60px;
 }
 
 .gifts-title {
-    width: 426px;
-    height: 144px;
+    width: 27%;
     margin: 0 auto;
     padding-top: 60px;
     padding-left: 4px;
@@ -230,32 +213,40 @@ li {
 
 
     @media (max-width: 768px) {
+        width: 55%;
         padding-left: 0px;
     }
 
     @media (max-width: 380px) {
         width: 368px;
-        margin-bottom: 116px;
+    }
+}
+
+.gift-cards-container {
+
+    @media (max-width: 768px) {
+        display: flex        ;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 .gift-items-block {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     padding-left: 82px;
     padding-right: 70px;
     grid-row-gap: 12px;
 
     @media (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 10px;
-        justify-items: center;
-        padding: 0px 67px;
+        width: 83.5%;
+        padding-left: 9px;
+        padding-right: 0px;
+        grid-column-gap: 4px;
     }
 
     @media (max-width: 380px) {
         grid-template-columns: 1fr;
-        padding: 0px 34px;
     }
 }
 
@@ -265,6 +256,11 @@ li {
     width: 474px;
     margin: 20px auto;
     padding-left: 0;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        width: 62%;
+    }
 
     @media (max-width: 380px) {
         width: 354px;
@@ -274,11 +270,10 @@ li {
 .filter-item {
     padding: 12px 20px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
 
     @media (max-width: 380px) {
         padding: 12px 8px;
-        border-radius: 10px;
     }
 }
 
@@ -331,34 +326,33 @@ li {
 /* Footer */
 
 .footer {
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     height: 496px;
     margin: 0 auto;
 
     @media (max-width: 768px) {
-        width: 768px;
         height: 928px;
     }
 
     @media (max-width: 380px) {
-        width: 380px;
     }
 }
 
 .footer-container {
-    width: 1276px;
+    width: 88.5%;
     height: 376px;
     margin: 0 auto;
     padding-top: 60px;
 
     @media (max-width: 768px) {
-        width: 752px;
+        width: 98%;
         height: 808px;
     }
 
     @media (max-width: 380px) {
-        width: 364px;
-        padding-top: 60px;
+        width: 96%;
+        padding-top: 63px;
     }
 }
 
@@ -381,7 +375,6 @@ li {
 .footer-card {
     border-radius: 20px;
     background-color: #ECF3F8;
-    height: 184px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -389,6 +382,10 @@ li {
     transition: all .3s;
     color: #181C29;
     padding-top: 20px;
+
+    @media (max-width: 768px) {
+        padding-bottom: 18px;
+    }
 }
 
 .footer-card-title {
