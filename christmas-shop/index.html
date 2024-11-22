@@ -17,6 +17,8 @@
                 <img src="./asserts/snowflake.svg" alt="snowflake">
                 the gifts
             </a>
+            <div class="icon-burger default"></div>
+            <!-- <div class="icon-burger close"></div> -->
             <nav class="nav-ul action-small">
                     <a class="nav-item" href="./gifts/">gifts</a>
                     <a class="nav-item" href="#about">about</a>
@@ -42,13 +44,15 @@
                 <h2 class="h2">Unleash your inner superhero!</h2>
                 <div class="p">This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.</div>
             </div>
-            <img class="about-img" src="./asserts/santa.png" alt="santa">
+            <div class="image-container">
+                <img class="about-img" src="./asserts/santa.png" alt="santa">
+            </div>
         </div>
     </section>
     <div class="slider-home">
         <div class="slider-container">
-            <div class="caption" style="color: #FFFFFF;">Become Happier!</div>
-            <div class="h2" style="color: #FFFFFF;">in the new 2025</div>
+            <div class="caption white">Become Happier!</div>
+            <div class="h2 white">in the new <span id="next-year"></span></div>
         </div>
         <div class="slider-content">
             <div class="slider-row">
@@ -68,35 +72,35 @@
 
     <section id="best" class="gifts-home">
         <div class="gifts-title">
-            <div class="caption" style="color: #FFFFFF;">Best Gifts</div>
-            <div class="h2" style="color: #FFFFFF;">especially for you</div>
+            <div class="caption white">Best Gifts</div>
+            <div class="h2 white">especially for you</div>
         </div>
         <div class="home-gifts-cards-container">
             <div class="gift-card">
                 <img class="img-card" src="./asserts/gift-for-work.png" alt="work">
                 <div class="description-gift">
-                    <h4 class="h4" style="color: #4361FF;">For work</h4>
+                    <h4 class="h4 card-gift-title purple">For work</h4>
                     <h3 class="h3">Console.log Guru</h3>
                 </div>
             </div>
             <div class="gift-card">
                 <img class="img-card" src="./asserts/gift-for-health.png" alt="health">
                 <div class="description-gift">
-                    <h4 class="h4" style="color: #06A44F;">For health</h4>
+                    <h4 class="h4 card-gift-title" style="color: #06A44F;">For health</h4>
                     <h3 class="h3">Hydration Bot</h3>
                 </div>
             </div>
             <div class="gift-card">
                 <img class="img-card" src="./asserts/gift-for-work.png" alt="work">
                 <div class="description-gift">
-                    <h4 class="h4" style="color: #4361FF;">For work</h4>
+                    <h4 class="h4 card-gift-title purple">For work</h4>
                     <h3 class="h3">Merge Master</h3>
                 </div>
             </div>
             <div class="gift-card">
                 <img class="img-card" src="./asserts/gift-for-harmony.png" alt="harmony">
                 <div class="description-gift">
-                    <h4 class="h4" style="color: #FF43F7;">For harmony</h4>
+                    <h4 class="h4 card-gift-title" style="color: #FF43F7;">For harmony</h4>
                     <h3 class="h3">Spontaneous Coding Philosopher</h3>
                 </div>
             </div>
@@ -106,23 +110,23 @@
         <div class="cta-container">
             <h2 class="h2 cta-title">Ready to start your<br> journey to a better<br> version of yourself?</h2>
             <form action="./gifts/">
-                <button class="main-button action-small" style="margin: -2px 0px 20px 0px;">Explore Magical Gifts</button>
+                <button class="main-button action-small" style="margin: -1px 0px 21px 0px;">Explore Magical Gifts</button>
             </form>
-            <div class="caption" style="color: #FFFFFF;">The New Year is Coming Soon...</div>
+            <div class="caption white">The New Year is Coming Soon...</div>
             <div class="timer-container">
                 <div class="timer-cell">
-                    <div class="cell-number h2">47</div>
+                    <div id="days" class="cell-number h2">47</div>
 <div class="cell-text h4">days</div>
                 </div>|
 <div class="timer-cell">
-<div class="cell-number h2">5</div>
+<div id="hours" class="cell-number h2">5</div>
 <div class="cell-text h4">hours</div>
 </div>|<div class="timer-cell">
-    <div class="cell-number h2">34</div>
+    <div id="minutes" class="cell-number h2">34</div>
 <div class="cell-text h4">minutes</div>
 </div>|
 <div class="timer-cell">
-    <div class="cell-number h2">12</div>
+    <div id="seconds" class="cell-number h2">12</div>
 <div class="cell-text h4">seconds</div>
 </div>
             </div>
@@ -175,5 +179,7 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="./js/timer.js"></script>
+    <script type="module" src="./js/slider.js"></script>
 </body>
 </html>
