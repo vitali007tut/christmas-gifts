@@ -440,7 +440,7 @@ a {
     transition: all .2s;
     background: inherit;
     cursor: pointer;
-    background-image: url('/christmas-shop/asserts/arrow-right.svg');
+    background-image: url('../christmas-shop/asserts/arrow-right.svg');
     background-repeat: no-repeat;
     background-position: center;
 
@@ -457,14 +457,14 @@ a {
 .slider-button.disabled:hover {
     opacity: 0.6;
     background: inherit;
-    background-image: url('/christmas-shop/asserts/arrow-right.svg');
+    background-image: url('./asserts/arrow-right.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .slider-button:hover {
     background: #FFFFFF;
-    background-image: url('/christmas-shop/asserts/arrow-right-hover.svg');
+    background-image: url('./asserts/arrow-right-hover.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
