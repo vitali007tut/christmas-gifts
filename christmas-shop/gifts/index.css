@@ -183,10 +183,10 @@ body.change {
         transition: right 0.3s;
         z-index: 1;
         max-width: 768px;
-        height: 960px;
+        height: calc(100vh - 63px);
         width: 100%;
         position: fixed;
-        top: 64px;
+        top: 63px;
         right: -100%;
         background-color: #FFFFFF;
         flex-direction: column;
@@ -198,10 +198,6 @@ body.change {
         line-height:  152%;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-    }
-
-    @media (max-width: 380px) {
-        height: 748px;
     }
 }
 
