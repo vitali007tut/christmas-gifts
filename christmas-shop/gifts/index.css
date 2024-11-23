@@ -218,7 +218,7 @@ li {
     }
 
     @media (max-width: 380px) {
-        width: 368px;
+        width: 95%;
     }
 }
 

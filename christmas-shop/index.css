@@ -180,12 +180,6 @@ a {
     }
 }
 
-@media (max-width: 768px){
-    .icon-burger {
-        display: block;
-    }
-}
-
 /* Hero */
 
 .main-home {
@@ -284,7 +278,7 @@ a {
 
     @media (max-width: 380px) {
         margin: 0 8px;
-        height: 880px;
+        height: 881px;
         flex-direction: column;
         width: 95.5%;
     }
@@ -337,14 +331,12 @@ a {
     padding-right: 30px;
 
     @media (max-width: 768px) {
-        max-width: 256px;
+        width: 35%;
     }
 
     @media (max-width: 380px) {
-        max-width: 325px;
-        padding-left: 20px;
-        padding-top: 60px;
-        padding-bottom: 61px;
+        width: 94%;
+        padding: 60px 0px 0px 20px;
     }
 }
 
@@ -495,7 +487,7 @@ a {
 }
 
 .gifts-title {
-    width: 426px;
+    width: 90%;
     height: 72px;
     margin: 0 auto;
     display: flex;
@@ -505,7 +497,6 @@ a {
     justify-content: space-between;
 
     @media (max-width: 768px) {
-        width: 364px;
     }
 }
 
@@ -531,7 +522,6 @@ a {
     }
 
     @media (max-width: 380px) {
-        width: 364px;
         grid-template-columns: 1fr;
         grid-row-gap: 12px;
     }
