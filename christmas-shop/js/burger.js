@@ -1,37 +1,15 @@
-const burgerDefault = document.querySelector(".icon-burger.default")
-const burgerClose = document.querySelector(".icon-burger.close")
-const burger = document.querySelectorAll(".icon-burger")
+const burgerIcon = document.querySelector(".icon-burger-container")
+const navMenu = document.querySelector('.nav-ul')
+const navItems = document.querySelectorAll('.nav-item')
 
-burgerClose.style.display = "none"
-let flagBurgerDefault = true;
-
-const setButtonStyle = () => {
-    if (window.innerWidth <= 768) {
-        if (flagBurgerDefault) {
-        burgerDefault.style.display = "block"
-        burgerClose.style.display = "none"
-        } else {
-        burgerDefault.style.display = "none"
-        burgerClose.style.display = "block"
-        }
-    } else {
-        burgerDefault.style.display = "none"
-        burgerClose.style.display = "none"
-    }
+const togglerNav = () => {
+    burgerIcon.classList.toggle('change')
+    navMenu.classList.toggle('change')
+    document.body.classList.toggle('change')
 }
 
-setButtonStyle()
+burgerIcon.addEventListener('click', togglerNav)
 
-window.addEventListener('resize', setButtonStyle)
-
-burgerDefault.addEventListener('click', () => {
-    burgerDefault.style.display = "none"
-    burgerClose.style.display = "block"
-    flagBurgerDefault = false
-})
-
-burgerClose.addEventListener('click', () => {
-    burgerDefault.style.display = "block"
-    burgerClose.style.display = "none"
-    flagBurgerDefault = true;
+navItems.forEach(item => {
+    item.addEventListener('click', togglerNav)
 })

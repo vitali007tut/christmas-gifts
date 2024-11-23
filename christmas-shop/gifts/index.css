@@ -105,6 +105,10 @@ li {
 
 /* Header */
 
+body.change {
+    overflow: hidden;
+}
+
 .header-container {
     width: 100%;
     display: flex;
@@ -146,6 +150,17 @@ li {
         color: #FF4646;
         background-color: #FF464610;
     }
+
+    &.active {
+        color: #FF4646;
+        background-color: #FF464610;
+        cursor: auto;
+    }
+
+    @media (max-width: 768px) {
+        width: fit-content;
+        margin: 0 auto;
+    }
 }
 
 .header-home {
@@ -165,29 +180,63 @@ li {
     gap: 8px;
 
     @media (max-width: 768px) {
-        display: none;
+        transition: right 0.3s;
+        z-index: 1;
+        max-width: 768px;
+        height: 960px;
+        width: 100%;
+        position: fixed;
+        top: 64px;
+        right: -100%;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        justify-content: center;
+
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        line-height:  152%;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 380px) {
+        height: 748px;
     }
 }
 
-.icon-burger {
+.change.nav-ul  {
+    right: 0;
+}
+
+.icon-burger-container {
+    display: none;
+    cursor: pointer;
     width: 40px;
     height: 40px;
-    cursor: pointer;
-    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    &.default {
-        background-image: url('../asserts/State=Default.svg');
-    }
-
-    &.close {
-        background-image: url('../asserts/State=Close.svg');
+    @media (max-width: 768px) {
+        display: flex;
     }
 }
 
-@media (max-width: 768px){
-    .icon-burger {
-        display: block;
-    }
+.bar1, .bar2 {
+    width: 21px;
+    height: 2px;
+    background-color: #181C29;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+transform: translate(0, 4px) rotate(-45deg);
+}
+
+.change .bar2 {
+    transform: translate(0, -4px) rotate(45deg);
 }
 
 /* Gifts */
