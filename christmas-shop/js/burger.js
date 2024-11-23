@@ -10,6 +10,4 @@ const togglerNav = () => {
 
 burgerIcon.addEventListener('click', togglerNav)
 
-navItems.forEach(item => {
-    item.addEventListener('click', togglerNav)
-})
+navItems.forEach(item => item.addEventListener('click', togglerNav))
