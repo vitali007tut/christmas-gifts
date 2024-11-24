@@ -103,6 +103,36 @@ li {
     color: #FFFFFF;
 }
 
+/* Scroll */
+
+.scroll-to-top {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid #FF4646;
+    cursor: pointer;
+    background-color: #ffffffe0;
+    background-image: url('../asserts/arrow-right-hover.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s;
+    transform: rotate(-90deg);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+
+    &:hover {
+        background-color: #FF4646;
+        background-image: url('../asserts/arrow-right.svg');
+    }
+
+    &.visible {
+        display: block;
+    }
+}
+
 /* Header */
 
 body.change {
