@@ -1,8 +1,3 @@
-const fetchData = async () => {
-    const response = await fetch('./js/gifts.json')
-    return response.json()
-}
-
 const shuffleArray = (array) => {
 for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -11,13 +6,15 @@ for (let i = array.length - 1; i > 0; i--) {
 return array;
 }
 
-fetchData()
-    .then(gifts => {
-        const result = shuffleArray(gifts).slice(0, 4)
-        const container = document.querySelector('.home-gifts-cards-container')
+export const randomGifts = async(num, selector, path = '') => {
+
+    const response = await fetch(path + './js/gifts.json')
+    const gifts = await response.json()
+
+    const result = shuffleArray(gifts).slice(0, num)
+    const container = document.querySelector(selector)
 
         result.forEach(element => {
-            console.log(element.name, element.category);
             const giftCard = document.createElement("div")
             giftCard.className = 'gift-card'
             const imgCard = document.createElement("img")
@@ -38,19 +35,19 @@ fetchData()
 
             switch (element.category) {
                 case 'For Work':
-                    imgCard.setAttribute('src', './asserts/gift-for-work.png')
+                    imgCard.setAttribute('src', `${path}./asserts/gift-for-work.png`)
                     h4.classList.add('purple')
                     break;
                     case 'For Health':
-                    imgCard.setAttribute('src', './asserts/gift-for-health.png')
+                    imgCard.setAttribute('src', `${path}./asserts/gift-for-health.png`)
                     h4.classList.add('green')
                     break;
                     case 'For Harmony':
-                    imgCard.setAttribute('src', './asserts/gift-for-harmony.png')
+                    imgCard.setAttribute('src', `${path}./asserts/gift-for-harmony.png`)
                     h4.classList.add('pink')
                     break;
                     }
 
             container.append(giftCard)
             });
-    })
+}
