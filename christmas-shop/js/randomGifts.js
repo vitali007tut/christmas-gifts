@@ -1,3 +1,5 @@
+import json from './gifts.json' with { type: "json" };
+
 const shuffleArray = (array) => {
 for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -6,17 +8,14 @@ for (let i = array.length - 1; i > 0; i--) {
 return array;
 }
 
-export const randomGifts = async(num, selector, path = '') => {
+export const randomGifts = (num, selector, path = '') => {
 
-    const response = await fetch(path + './js/gifts.json')
-    const gifts = await response.json()
-
-    const result = shuffleArray(gifts).slice(0, num)
+    const result = shuffleArray(json).slice(0, num)
     const container = document.querySelector(selector)
 
         result.forEach(element => {
             const giftCard = document.createElement("div")
-            giftCard.className = 'gift-card'
+            giftCard.className = 'gift-card active'
             const imgCard = document.createElement("img")
             imgCard.className = "img-card"
             imgCard.setAttribute('alt', element.category)

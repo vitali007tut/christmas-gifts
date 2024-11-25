@@ -5,9 +5,14 @@ const navItems = document.querySelectorAll('.nav-item')
 const togglerNav = () => {
     burgerIcon.classList.toggle('change')
     navMenu.classList.toggle('change')
-    document.body.classList.toggle('change')
 }
 
-burgerIcon.addEventListener('click', togglerNav)
+burgerIcon.addEventListener('click', () => {
+    togglerNav()
+    document.body.classList.toggle('change')
+})
 
-navItems.forEach(item => item.addEventListener('click', togglerNav))
+navItems.forEach(item => item.addEventListener('click', () => {
+    togglerNav()
+    document.body.classList.remove('change')
+}))

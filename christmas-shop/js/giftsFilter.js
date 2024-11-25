@@ -1,14 +1,4 @@
-import { randomGifts } from './randomGifts.js'
-
-let cards;
-
-const setCards = async() =>  {
-    await  randomGifts(12, '.gift-items-block', '.')
-    cards = document.querySelectorAll('.gift-card')
-    cards.forEach(card => card.classList.add('active'))
-}
-
-setCards()
+export const setFilterMode = () => {
 
 const allBtn = document.querySelector('#all')
 const workBtn = document.querySelector('#work')
@@ -26,7 +16,7 @@ arrBtn.forEach(btn => btn.addEventListener('click', () => {
     btn.classList.add('active')
     btn.disabled = true
 
-    cards = document.querySelectorAll('.gift-card')
+    const cards = document.querySelectorAll('.gift-card')
 
     if (btn.id === 'all')  {
         cards.forEach(card => card.classList.add('active'))
@@ -40,3 +30,5 @@ arrBtn.forEach(btn => btn.addEventListener('click', () => {
         if (isActive) card.classList.add('active')
     })
 }))
+
+}
