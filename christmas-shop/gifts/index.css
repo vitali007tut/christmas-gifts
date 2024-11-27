@@ -534,14 +534,10 @@ transform: translate(0, 4px) rotate(-45deg);
     @media (max-width: 768px) {
         height: 928px;
     }
-
-    @media (max-width: 380px) {
-    }
 }
 
 .footer-container {
-    width: 88.5%;
-    height: 376px;
+    width: 88.6%;
     margin: 0 auto;
     padding-top: 60px;
 
@@ -552,23 +548,19 @@ transform: translate(0, 4px) rotate(-45deg);
 
     @media (max-width: 380px) {
         width: 96%;
-        padding-top: 63px;
+        padding-top: 60px;
     }
 }
 
 .footer-cards-contaner {
-    height: 204px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 12px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1140px) {
         grid-template-columns: none;
         grid-gap: 12px;
         height: auto;
-    }
-
-    @media (max-width: 380px) {
     }
 }
 
@@ -582,19 +574,19 @@ transform: translate(0, 4px) rotate(-45deg);
     transition: all .3s;
     color: #181C29;
     padding-top: 20px;
-
-    @media (max-width: 768px) {
-        padding-bottom: 18px;
-    }
 }
 
 .footer-card-title {
     padding-top: 13px;
-    padding-bottom: 12px;
+    padding-left: 4px;
 }
 
 .footer-card:hover {
     color: #FF4646;
+}
+
+.footer-card-link {
+    padding: 12px 0px 19px 0px;
 }
 
 .footer-links {
@@ -602,10 +594,6 @@ transform: translate(0, 4px) rotate(-45deg);
     margin: 0 auto;
     padding-top: 67px;
 
-    @media (max-width: 380px) {
-        padding-top: 69px;
-    }
-    
 }
 
 .socials {
