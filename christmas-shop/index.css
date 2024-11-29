@@ -631,13 +631,12 @@ transform: translate(0, 4px) rotate(-45deg);
 }
 
 .gifts-title {
-    width: 90%;
     height: 72px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     justify-content: space-between;
 
     @media (max-width: 768px) {
@@ -645,30 +644,12 @@ transform: translate(0, 4px) rotate(-45deg);
 }
 
 .home-gifts-cards-container {
-    width: 88.5%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    row-gap: 10px;
+    justify-content: center;
+    gap: 12px;
     flex-wrap: wrap;
-
-    @media (max-width: 768px) {
-        width: 84%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-        grid-row-gap: 12px;
-    }
-
-    @media (max-width: 767px) {
-        grid-auto-columns: 1fr 1fr;
-        grid-template-columns: auto;
-    }
-
-    @media (max-width: 380px) {
-        grid-template-columns: 1fr;
-        grid-row-gap: 12px;
-    }
+    padding: 0 20px;
 }
 
 .gift-card {
