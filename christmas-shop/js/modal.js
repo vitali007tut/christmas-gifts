@@ -25,7 +25,7 @@ const colorClasses = ['purple', 'green', 'pink']
 const snowFlakes = [liveSnowflakes, createSnowflakes, loveSnowflakes, dreamSnowflakes]
 
 const closeModal = () => {
-    document.body.classList.remove('change')
+    document.body.classList.remove('overflow')
     overlay.classList.add('hidden')
     modal.classList.remove('active')
     colorClasses.forEach(color => category.classList.remove(color))
@@ -36,7 +36,7 @@ overlay.addEventListener('click', closeModal)
 iconClose.addEventListener('click', closeModal)
 
 cards.forEach(card => card.addEventListener('click', () => {
-    document.body.classList.add('change')
+    document.body.classList.add('overflow')
     overlay.classList.remove('hidden')
     modal.classList.add('active')
 

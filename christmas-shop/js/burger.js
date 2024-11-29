@@ -9,10 +9,10 @@ const togglerNav = () => {
 
 burgerIcon.addEventListener('click', () => {
     togglerNav()
-    document.body.classList.toggle('change')
+    document.body.classList.toggle('overflow')
 })
 
 navItems.forEach(item => item.addEventListener('click', () => {
     togglerNav()
-    document.body.classList.remove('change')
+    document.body.classList.remove('overflow')
 }))

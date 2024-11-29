@@ -139,6 +139,7 @@ li {
     transition: top 0.6s;
     top: -100%;
     max-width: 400px;
+    width: 95%;
     height: 514px;
     background-color: #ECF3F8;
     border-radius: 20px;
@@ -244,7 +245,7 @@ li {
 
 /* Header */
 
-body.change {
+body.overflow {
     overflow: hidden;
 }
 
