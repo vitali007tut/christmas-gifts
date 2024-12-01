@@ -106,7 +106,6 @@ a {
     top: -100%;
     max-width: 400px;
     width: 95%;
-    height: 514px;
     background-color: #ECF3F8;
     border-radius: 20px;
     position: fixed;
@@ -158,9 +157,13 @@ a {
 
 .number-power {
     justify-content: space-between;
-    width: 45%;
     display: flex;
     align-items: center;
+    gap: 15px;
+}
+
+.snowflakes {
+    width: 96px;
 }
 
 .snowflake {
@@ -346,25 +349,22 @@ transform: translate(0, 4px) rotate(-45deg);
 .main-home {
     max-width: 1440px;
     width: 100%;
-    height: 584px;
     margin: 0 auto;
     border-radius: 20px 20px 0px 0px;
     background-color: #FF4646;
-    background-image: url('./asserts/bg-ball.png'), url('./asserts/bg-snow.png');
+    background-image: url(./asserts/bg-ball.png), url(./asserts/bg-snow.png);
     background-size: cover;
-    background-position-y: -40px;
+    background-position: center;
     display: flex;
     align-items: center;
-    background-repeat: no-repeat;
-    background-position-x: center;
+    padding-top: 120px;
+    padding-bottom: 60px;
 
     @media (max-width: 768px) {
-        background-size: 1251px 524px;
-        background-position-y: 0;
     }
 
     @media (max-width: 380px) {
-        background-size: 1362px 572px;
+        padding-bottom: 107px;
     }
 }
 
@@ -409,11 +409,13 @@ transform: translate(0, 4px) rotate(-45deg);
     margin: 0 auto;
     background-image: url('./asserts/bg-snow.png');
     background-size: cover;
+    background-position: center;
     background-color: #FF4646;
-    padding-bottom: 121px;
+    padding-bottom: 60px;
+    padding-top: 59px;
 
     @media (max-width: 600px) {
-        padding-top: 48px;
+        padding-top: 60px;
     }
 }
 
@@ -489,22 +491,17 @@ transform: translate(0, 4px) rotate(-45deg);
 .slider-home {
     max-width: 1440px;
     width: 100%;
-    height: 488px;
     margin: 0 auto;
     background-image: url('./asserts/bg-snow.png');
     background-size: cover;
+    background-position: center;
     background-color: #FF4646;
     display: flex;
     align-items: center;
     overflow: hidden;
     flex-direction: column;
-
-    @media (max-width: 768px) {
-        height: 488px;
-    }
-    @media (max-width: 380px) {
-        height: 488px;
-    }
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .slider-content {
@@ -610,17 +607,16 @@ transform: translate(0, 4px) rotate(-45deg);
 .gifts-home {
     max-width: 1440px;
     width: 100%;
-    height: fit-content;;
     margin: 0 auto;
     background-image: url('./asserts/bg-snow.png');
     background-size: cover;
+    background-position: center;
     background-color: #FF4646;
+    padding-top: 61px;
+    padding-bottom: 60px;
 
     @media (max-width: 768px) {
-    }
-
-    @media (max-width: 380px) {
-        height: 1500px;
+        padding-top: 62px;
     }
 }
 
@@ -703,28 +699,15 @@ transform: translate(0, 4px) rotate(-45deg);
 .cta-home {
     max-width: 1440px;
     width: 100%;
-    height: 728px;
     margin: 0 auto;
     background-image: url('./asserts/bg-forest.png'), url('./asserts/bg-snow.png');
-    background-size: 1440px 670px;
-    background-position-y: 59px;
-    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-color: #FF4646;
     display: flex;
     border-radius: 0px 0px 20px 20px;
-
-    @media (max-width: 768px) {
-        height: 728px;
-        background-position-x: center;
-        background-size: 1440px 668px;
-        background-position-y: 60px;
-    }
-
-    @media (max-width: 380px) {
-        height: 756px;
-        background-position-y: 72px;
-        background-size: 1514px 685px;
-    }
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .cta-container {
@@ -733,16 +716,12 @@ transform: translate(0, 4px) rotate(-45deg);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
-    justify-content: center;
-
-    @media (max-width: 768px) {
-        justify-content: center;
-    }
+    padding-top: 100px;
+    padding-bottom: 120px;
 
     @media (max-width: 380px) {
-        padding-top: 216px;
-        justify-content: flex-start;
+    padding-top: 102px;
+    padding-bottom: 116px;
     }
 }
 
