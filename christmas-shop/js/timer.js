@@ -4,14 +4,14 @@ const minutesElement = document.querySelector('#minutes')
 const secondsElement = document.querySelector('#seconds')
 const nextYearElement = document.querySelector('#next-year')
 
-const nextYear = new Date().getFullYear() + 1;
-nextYearElement.innerHTML = nextYear;
-const newYear = new Date(`Jan 1, ${nextYear} 00:00:00`).getTime()
+const nextUTCYear = new Date().getUTCFullYear() + 1;
+nextYearElement.innerHTML = nextUTCYear;
+const newYearDayUTC = new Date(Date.UTC(nextUTCYear, 0, 1, 0, 0, 0));
 
 const timer = setInterval(() => {
 
-    const now = new Date().getTime()
-    const diff = newYear - now;
+    const now = new Date()
+    const diff = newYearDayUTC - now;
     
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

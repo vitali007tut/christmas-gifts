@@ -177,6 +177,8 @@ a {
 }
 
 .modal-bottom-part {
+    width: 100%;
+    box-sizing: border-box;
     height: 284px;
     border-radius: 20px;
     background-color: #FFFFFF;
