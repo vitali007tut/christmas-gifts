@@ -105,7 +105,7 @@ a {
     transition: top 0.6s;
     top: -100%;
     max-width: 400px;
-    width: 95%;
+    width: 95.5%;
     background-color: #ECF3F8;
     border-radius: 20px;
     position: fixed;
@@ -163,7 +163,13 @@ a {
 }
 
 .snowflakes {
-    width: 96px;
+    display: flex;
+    width: 111px;
+    justify-content: space-between;
+
+    @media (max-width: 380px) {
+        width: 109px;
+    }
 }
 
 .snowflake {
